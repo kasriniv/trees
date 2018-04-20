@@ -1,0 +1,51 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "trees"
+  },
+  "paths" : {
+    "/trees" : {
+      "get" : {
+        "summary" : "asd",
+        "description" : "asd",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "all good",
+            "schema" : {
+              "$ref" : "#/definitions/trees"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      }
+    }
+  },
+  "definitions" : {
+    "trees" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "region" : {
+          "type" : "string"
+        },
+        "product" : {
+          "type" : "string"
+        }
+      },
+      "title" : "Root Type for trees",
+      "description" : "The root of the trees type's schema."
+    }
+  }
+}
