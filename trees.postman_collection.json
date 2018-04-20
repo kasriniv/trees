@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "b67eebd0-57ba-42e7-a851-36b41fad7788",
+		"name": "trees",
+		"description": "version=1.0 for all trees",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "trees",
+			"description": "Folder for trees",
+			"item": [
+				{
+					"name": "asd",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http:///trees",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"trees"
+							]
+						},
+						"description": "asd"
+					},
+					"response": [
+						{
+							"id": "a0bef99a-3ad6-4365-9faa-7b65c2d77d6d",
+							"name": "asd",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http:///trees",
+									"host": [
+										"http:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"trees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t\"name\": \"subscription1\",\n\t\"category\": \"enterprise\",\n\t\"id\": 1,\n\t\"region\": \"Americas\",\n\t\"product\": \"fuse\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "15c78ed9-1ffa-445e-a085-110f4a1a4452",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2f60bebb-2559-4e2a-a308-320a533caf68",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
