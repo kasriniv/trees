@@ -1,0 +1,113 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "giriapi",
+        "version": "1.0.0",
+        "description": "A sample API that uses a petstore as an example to demonstrate features\nin the OpenAPI 3.0 specification",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Swagger API Team",
+            "url": "http://swagger.io",
+            "email": "apiteam@swagger.io"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://petstore.swagger.io/api"
+        }
+    ],
+    "paths": {
+        "/entries": {
+            "summary": "giritest",
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Entry"
+                                },
+                                "examples": {
+                                    "exampleentry": {
+                                        "value": {
+                                            "id": "gtest",
+                                            "name": "ktest"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "entry response"
+                    }
+                },
+                "operationId": "findentries",
+                "description": "Returns all pets from the system that the user has access to\n"
+            },
+            "post": {
+                "requestBody": {
+                    "description": "Pet to add to the store",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Entry"
+                            },
+                            "examples": {
+                                "tigresse": {
+                                    "value": {
+                                        "id": "Tigresse",
+                                        "name": "cat"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Entry"
+                                },
+                                "examples": {
+                                    "anotherpost": {
+                                        "value": {
+                                            "id": "some text",
+                                            "name": "some text"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "pet response"
+                    }
+                },
+                "operationId": "addEntry",
+                "description": "Creates a new pet in the store.  Duplicates are allowed"
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Entry": {
+                "required": [
+                    "id"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
